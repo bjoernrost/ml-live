@@ -163,7 +163,7 @@ def read_dataset(filename, mode, batch_size = 512):
 def train_and_evaluate(args):
     estimator = build_estimator(args['output_dir'], args['nbuckets'], args['hidden_units'].split(' '))
     # add our custom eval metric
-    estimator = tf.contrib.estimator.add_metrics(estimator, rsme)
+    estimator = tf.contrib.estimator.add_metrics(estimator, rmse)
     train_spec = tf.estimator.TrainSpec(
         input_fn = read_dataset(
             filename = args['train_data_paths'],
