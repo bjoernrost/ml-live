@@ -2,7 +2,7 @@ trainingInput:
   scaleTier: STANDARD_1
   hyperparameters:
     goal: MINIMIZE
-    maxTrials: 30
+    maxTrials: 3
     maxParallelTrials: 3
     hyperparameterMetricTag: rmse
     params:
